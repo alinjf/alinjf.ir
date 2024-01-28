@@ -1,0 +1,33 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import BlogPost from "../../components/BlogPost.astro";
+import Container from "../../components/Container.astro";
+
+export async function getStaticPaths() {
+    const posts = await Astro.glob("../../posts/services/*.md");
+
+    return posts.map((post) => ({
+        params: {
+            slug: post.frontmatter.slug,
+        },
+        props: {
+            post,
+        },
+    }));
+}
+
+console.log(Astro.props, "aaa");
+const { Content } = Astro.props.post;
+---
+
+<Layout title="Welcome to Astrolus.">
+    <main class="space-y-40">
+        <div class="pt-36">
+            <Container>
+                <BlogPost>
+                    <Content />
+                </BlogPost>
+            </Container>
+        </div>
+    </main>
+</Layout>
