@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Text from "../components/Text.astro";
+import BlogPost from "../components/BlogPost.astro";
+import Container from "../components/Container.astro";
+import MarkDown from "./automation.md";
+---
+
+<Layout title="Welcome to Astrolus.">
+    <main class="space-y-40">
+        <div class="pt-36">
+            <Container>
+                <BlogPost>
+                    <MarkDown />
+                </BlogPost>
+            </Container>
+        </div>
+    </main>
+</Layout>
