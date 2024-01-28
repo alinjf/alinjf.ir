@@ -2,6 +2,6 @@ module.exports = {
     printWidth: 1000,
     tabWidth: 4,
 
-    plugins: [require("prettier-plugin-tailwindcss")],
+    plugins: ["prettier-plugin-tailwindcss", 'prettier-plugin-astro'],
     tailwindConfig: "./tailwind.config.cjs",
 };
