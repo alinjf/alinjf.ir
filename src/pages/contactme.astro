@@ -1,0 +1,62 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BlogPost from "../components/BlogPost.astro";
+import Container from "../components/Container.astro";
+import Text from "../components/Text.astro";
+import Title from "../components/Title.astro";
+import Box from "../components/Box.astro";
+
+const socials = [
+    {
+        link: "https://www.linkedin.com/in/alinjf7/",
+        icon: "/images/social-icons/linkedin.png",
+    },
+    {
+        link: "https://t.me/alinjf7",
+        icon: "/images/social-icons/telegram.png",
+    },
+    {
+        link: "https://wa.me/989127616769",
+        icon: "/images/social-icons/whatsapp.png",
+    },
+];
+---
+
+<Layout title="Welcome to Astrolus.">
+    <main class="space-y-40">
+        <div class="pt-36">
+            <Container>
+                <div class="flex gap-8">
+                    <Box>
+                        <Title>
+                            <h1 class="text-3xl mb-2">تماس با من</h1>
+                        </Title>
+                        <Text> جهت برقراری ارتباط با من، لطفاً از طریق شبکه‌های اجتماعی و یا تماس تلفنی اقدام فرمایید. </Text>
+                        <Text>
+                            <p>من را در تلگرام، لینکدین و واتساپ میتونین پیدا کنین.</p>
+                        </Text>
+                        <Text>
+                            <p class="text-center my-4">
+                                <a href="tel:09127616769" class="text-2xl font-bold text-secondary hover:text-orange-600">
+                                    <bdi> 0912 761 6769 </bdi>
+                                </a>
+                            </p>
+                            <div class="flex gap-2 my-4 justify-center">
+                                {
+                                    socials.map((index) => (
+                                        <a target="_blank" href={index.link}>
+                                            <img width="25" src={index.icon} />
+                                        </a>
+                                    ))
+                                }
+                            </div>
+                        </Text>
+                    </Box>
+                    <div class="m-auto">
+                        <img width="400" src="/images/contactme.webp" class="rounded" />
+                    </div>
+                </div>
+            </Container>
+        </div>
+    </main>
+</Layout>
