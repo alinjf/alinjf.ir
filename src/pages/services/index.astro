@@ -6,7 +6,7 @@ import Text from "../../components/Text.astro";
 import Title from "../../components/Title.astro";
 import Box from "../../components/Box.astro";
 import Features from "../../components/Features.astro";
-
+import * as myPost from "../../posts/crowdFunding.md";
 const socials = [
     {
         link: "https://www.linkedin.com/in/alinjf7/",
@@ -23,12 +23,11 @@ const socials = [
 ];
 ---
 
-<Layout title="Welcome to Astrolus.">
-    <main class="space-y-40">
-        <div class="pt-36">
-            <Container>
-                <Features />
-            </Container>
-        </div>
-    </main>
-</Layout>
+<BlogPost>
+    <Features />
+
+    <Title>
+        <h1 class="mt-8 text-3xl">پلتفرم کراد فاندینگ(Crowd Funding)</h1>
+    </Title>
+    <myPost.Content />
+</BlogPost>
