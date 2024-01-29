@@ -1,7 +1,20 @@
 ---
+import Layout from "../layouts/Layout.astro";
 import "../style/blogPost.scss";
+import Box from "./Box.astro";
+import Container from "./Container.astro";
 ---
 
-<div class={"blogPost "}>
-    <slot />
-</div>
+<Layout title="Welcome to Astrolus.">
+    <main class="space-y-40">
+        <div class="pt-36">
+            <Container>
+                <div class={"blogPost "}>
+                    <Box>
+                        <slot />
+                    </Box>
+                </div>
+            </Container>
+        </div>
+    </main>
+</Layout>

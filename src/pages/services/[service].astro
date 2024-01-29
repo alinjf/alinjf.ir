@@ -19,14 +19,6 @@ export async function getStaticPaths() {
 const { Content } = Astro.props.post;
 ---
 
-<Layout title="Welcome to Astrolus.">
-    <main class="space-y-40">
-        <div class="pt-36">
-            <Container>
-                <BlogPost>
-                    <Content />
-                </BlogPost>
-            </Container>
-        </div>
-    </main>
-</Layout>
+<BlogPost>
+    <Content />
+</BlogPost>
