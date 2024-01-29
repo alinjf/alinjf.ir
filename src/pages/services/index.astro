@@ -7,23 +7,9 @@ import Title from "../../components/Title.astro";
 import Box from "../../components/Box.astro";
 import Features from "../../components/Features.astro";
 import * as myPost from "../../posts/crowdFunding.md";
-const socials = [
-    {
-        link: "https://www.linkedin.com/in/alinjf7/",
-        icon: "/images/social-icons/linkedin.png",
-    },
-    {
-        link: "https://t.me/alinjf7",
-        icon: "/images/social-icons/telegram.png",
-    },
-    {
-        link: "https://wa.me/989127616769",
-        icon: "/images/social-icons/whatsapp.png",
-    },
-];
 ---
 
-<BlogPost>
+<BlogPost title={myPost.frontmatter.pageTitle} description={myPost.frontmatter.pageDescription} keywords={myPost.frontmatter.pageKeywords}>
     <Features />
 
     <Title>

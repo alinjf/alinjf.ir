@@ -2,6 +2,7 @@
 import AppFooter from "../components/AppFooter.astro";
 import AppHeader from "../components/AppHeader.astro";
 import "../style/font.css";
+const props = Astro.props;
 ---
 
 <!doctype html>
@@ -12,7 +13,9 @@ import "../style/font.css";
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
         <meta name="description" content="Template built with tailwindcss using Tailus blocks v2" />
-        <title>alinjf.ir</title>
+        <title>{props.title ? props.title : "alinjf.ir"}</title>
+        <meta name="description" content={props.description ? props.description : "راه حل‌های چابک نرم‌افزاری"} />
+        <meta name="keywords" content={props.keywords ? props.keywords : "نرم‌افزار,برنامه نویس,Crm,پلتفرم کراد فاندینگ,جمع سپاری جمعی,کراد فاندینگ,سکو کراد فاندینگ"} />
     </head>
     <body class="bg-white dark:bg-gray-900">
         <AppHeader />

@@ -3,9 +3,13 @@ import Layout from "../layouts/Layout.astro";
 import "../style/blogPost.scss";
 import Box from "./Box.astro";
 import Container from "./Container.astro";
+
+const props = Astro.props;
+
+console.log(props, 'aaa');
 ---
 
-<Layout title="Welcome to Astrolus.">
+<Layout title={props.title} description={props.description} keywords={props.keywords}>
     <main class="space-y-40">
         <div class="pt-36">
             <Container>
