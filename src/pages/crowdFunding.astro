@@ -1,0 +1,14 @@
+---
+import BlogPost from "../components/BlogPost.astro";
+import Title from "../components/Title.astro";
+import Features from "../components/Features.astro";
+import * as myPost from "../posts/crowdFunding.md";
+---
+
+<BlogPost title={myPost.frontmatter.pageTitle} description={myPost.frontmatter.pageDescription} keywords={myPost.frontmatter.pageKeywords}>
+    <Title slot="title">
+        <h1 class="mt-8 text-3xl">پلتفرم کراد فاندینگ (Crowd Funding)</h1>
+    </Title>
+    <myPost.Content />
+    <Features slot="afterContent" />
+</BlogPost>

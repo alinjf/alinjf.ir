@@ -5,20 +5,23 @@ import Box from "./Box.astro";
 import Container from "./Container.astro";
 
 const props = Astro.props;
-
-console.log(props, 'aaa');
 ---
 
 <Layout title={props.title} description={props.description} keywords={props.keywords}>
-    <main class="space-y-40">
-        <div class="pt-36">
+    <main>
+        <div class="pt-16">
             <Container>
                 <div class={"blogPost "}>
+                    <slot name="title" />
+
                     <Box>
                         <slot />
                     </Box>
                 </div>
             </Container>
+        </div>
+        <div class="my-8">
+            <slot name="afterContent" />
         </div>
     </main>
 </Layout>
