@@ -2,7 +2,10 @@
 import AppFooter from "../components/AppFooter.astro";
 import AppHeader from "../components/AppHeader.astro";
 import "../style/font.css";
+
 const props = Astro.props;
+// Call the function to start measuring Web Vitals
+// reportWebVitals();
 ---
 
 <!doctype html>
@@ -22,4 +25,8 @@ const props = Astro.props;
         <slot />
         <AppFooter />
     </body>
+    <!-- <script>
+        import { reportWebVitals } from "../components/web-vital";
+        reportWebVitals();
+    </script> -->
 </html>
