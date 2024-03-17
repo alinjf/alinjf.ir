@@ -1,12 +1,8 @@
 ---
-import Layout from "../../layouts/Layout.astro";
 import BlogPost from "../../components/BlogPost.astro";
-import Container from "../../components/Container.astro";
-import Text from "../../components/Text.astro";
 import Title from "../../components/Title.astro";
-import Box from "../../components/Box.astro";
 import Features from "../../components/Features.astro";
-import * as myPost from "../../posts/crowdfunding.md";
+import * as myPost from "../../posts/crowdFunding.mdx";
 ---
 
 <BlogPost title={myPost.frontmatter.pageTitle} description={myPost.frontmatter.pageDescription} keywords={myPost.frontmatter.pageKeywords}>
