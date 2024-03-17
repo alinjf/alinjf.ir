@@ -2,12 +2,12 @@
 import BlogPost from "../components/BlogPost.astro";
 import Title from "../components/Title.astro";
 import Features from "../components/Features.astro";
-import * as myPost from "../posts/crowdFunding.md";
+import * as myPost from "../posts/crowdFunding.mdx";
 ---
 
 <BlogPost title={myPost.frontmatter.pageTitle} description={myPost.frontmatter.pageDescription} keywords={myPost.frontmatter.pageKeywords}>
     <Title slot="title">
-        <h1 class="mt-8 text-3xl">پلتفرم تامین سرمایه جمعی یا کراد فاندینگ (crowd funding)</h1>
+        <h1 class="mt-8 text-3xl mb-6">پلتفرم تامین سرمایه جمعی یا کراد فاندینگ (crowd funding)</h1>
     </Title>
     <myPost.Content />
     <Features slot="afterContent" />
