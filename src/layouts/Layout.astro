@@ -1,7 +1,6 @@
 ---
 import AppFooter from "../components/AppFooter.astro";
 import AppHeader from "../components/AppHeader.astro";
-import "../style/font.css";
 
 const props = Astro.props;
 // Call the function to start measuring Web Vitals
@@ -17,6 +16,7 @@ const props = Astro.props;
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="preload stylesheet" as="style" type="text/css" href="/fonts/font.css" />
         <meta name="generator" content={Astro.generator} />
         <meta name="description" content="Template built with tailwindcss using Tailus blocks v2" />
         <link rel="sitemap" href="/sitemap-index.xml" />
